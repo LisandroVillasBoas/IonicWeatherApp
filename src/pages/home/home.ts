@@ -19,11 +19,15 @@ export class HomePage {
 
   private showForecast() {
     this.city = 'gravatai';
-    this.weatherProvider.getForecast(this.city).subscribe(
+    this.weatherProvider.getForecast(this.city).subscribe( 
       data => {
         // this.model = data['results'];
         this.weather = data.body.forecast.simpleforecast.forecastday;
         // console.log('OKK'+ data.body.response.features.forecast);
+        for (var item of this.weather) {
+          console.log(item.date.day);
+      }
+      
         console.log('OKK'+ this.weather[0].date.epoch);
       },
       (err: HttpErrorResponse) => {

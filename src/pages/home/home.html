@@ -5,14 +5,23 @@
 </ion-header>
 
 <ion-content padding>
-    <!-- <ion-grid>
+    <ion-grid>
         <ion-row>
             <ion-col>
-                <h2></h2>
+                <ion-item>
+                    <ion-label floating>Cidade</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <button ion-button>Buscar</button>
             </ion-col>
         </ion-row>
-    </ion-grid> -->
-    <li *ngFor="let t of wheather">
-        {{ t.date.epoch }}
+
+    </ion-grid>
+    <h1>teste</h1>
+
+    <li *ngFor="let t of weather">
+        {{ t.conditions }}
     </li>
 </ion-content>
